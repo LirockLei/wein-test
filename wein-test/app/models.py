@@ -13,3 +13,13 @@ class Goods(db.Model):
     img_url = db.Column(db.String(256))  # 商品图片路径
     price = db.Column(db.String(32))  # 商品价格
     detail = db.Column(db.String(1024))   # 商品详情介绍
+
+    # 序列化待返回json数据
+    def to_dict(self):
+        return {
+            'goods_id': self.id,
+            'title': self.title,
+            'img': self.img_url if self.img_url else '',
+            'price': self.price,
+            'detail': self.detail
+        }
