@@ -59,7 +59,7 @@ def parse_page(html):
 
         title = ''.join(gl_item.xpath('.//div[@class="p-name p-name-type-2"]//em//text()'))
         price = ''.join(gl_item.xpath('.//div[@class="p-price"]/strong/i/text()'))
-        detail = ''.join(gl_item.xpath('.//div[@class="p-name p-name-type-2"]/a/text()'))
+        detail = ''.join(gl_item.xpath('.//div[@class="p-name p-name-type-2"]/a/i/text()'))
         print(img_url)
         count += 1
         print(count)
@@ -82,7 +82,7 @@ def save_img(img_url):
     response = requests.get(img_url)
     result = response.content
     img_name = img_url.split('/')[-1]
-    with open('./images/%s' % img_name, 'wb')as f:
+    with open('../static/images/%s' % img_name, 'wb')as f:
         f.write(result)
 
 
