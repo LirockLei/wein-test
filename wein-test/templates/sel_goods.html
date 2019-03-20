@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>sel-goods</title>
+		<link rel="stylesheet" type="text/css" href="css/sel_goods.css"/>
+	</head>
+	<body id="body">
+		<div id="sel-way">
+			按商品名称查询：
+			<form class="sel-by-title" action="" method="post">
+				<input type="text" name="title" id="title" placeholder="请输入商品名称"/>
+				<input type="submit" value="查询"/>
+			</form>
+			按商品价格查询：
+			<form class="sel-by-price" action="" method="post">
+				<input type="text" name="min_price" id="min_price" placeholder="最低价格"/> ——
+				<input type="text" name="max_price" id="max_price" placeholder="最高价格"/>
+				<input type="submit" value="查询"/>
+			</form>
+		</div>
+		<div class="goods-list">
+			<ul class="goods-module">
+				<li>
+					<div class="goods">
+						<div class="image">
+							<img src=""/>
+						</div>
+						<div class="goods-info">
+							<span id="goods-title">
+								title
+							</span>
+							<br />
+							<span id="goods-price">
+								price
+							</span>
+							<br />
+							<span id="goods-detail">
+								detail
+							</span>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,57 @@
+*{
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+#body{
+	width: 90%;
+	padding-left: 5%;
+	padding-right: 5%;
+	background-color: lightcyan;
+}
+
+#sel-way{
+	background-color: lightblue;
+	text-align: center;
+}
+
+.sel-by-title{
+	padding: 10px;
+}
+
+.sel-by-price{
+	padding: 10px;
+}
+
+
+.goods-list{
+	background-color: lightgrey;
+}
+
+.goods{
+	background-color: lightsteelblue;
+	width: 300px;
+	height: 400px;
+}
+
+.image{
+	background-color: lemonchiffon;
+	width: 300px;
+	height: 300px;
+}
+
+#goods-title{
+	color: black;
+	font-size: 20px;
+}
+
+#goods-price{
+	color: red;
+	font-size: 25px;
+}
+
+#goods-detail{
+	color: black;
+	font-size: 15px;
+}

@@ -1,0 +1,43 @@
+*{
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+#body{
+	width: 90%;
+	padding-left: 5%;
+	padding-right: 5%;
+	background-color: lightcyan;
+	text-align: center;
+}
+
+#title{
+	height: 50px;
+	line-height: 50px;
+}
+
+#img{
+	padding: 10px;
+}
+
+#price{
+	height: 50px;
+	line-height: 50px;
+}
+
+#detail{
+	height: 50px;
+	line-height: 50px;
+}
+
+#submit{
+	color: red;
+	height: 40px;
+	width: 50px;
+	font-size: 20px;
+}
+
+#submit:hover{
+	background-color: lightgrey;
+}
