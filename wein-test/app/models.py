@@ -20,6 +20,6 @@ class Goods(db.Model):
             'goods_id': self.id,
             'title': self.title,
             'img': self.img_url if self.img_url else '',
-            'price': self.price,
+            'price': int(self.price),
             'detail': self.detail
         }

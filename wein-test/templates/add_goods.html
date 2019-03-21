@@ -6,7 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="css/add_goods.css"/>
 	</head>
 	<body id="body">
-		<form action="" method="post">
+		<form class="form-add" action="" method="post">
 			商品名称：<input type="text" name="title" id="title" placeholder="请输入商品名称"/>
 			<br />
 			请上传商品图片：<input type="file" name="img" id="img" accept="image/*"/>
@@ -14,8 +14,13 @@
 			商品价格：<input type="text" name="price" id="price" placeholder="请输入商品价格"/>
 			<br />
 			商品详情：<input type="text" name="detail" id="detail" placeholder="请输入商品详情"/>
+			<div class="error-msg" id="error-msg"><span></span></div>
 			<br />
 			<input type="submit" id="submit" value="提交"/>
-		</form>		
+		</form>
+
+		<script src="/static/js/jquery.min.js"></script>
+		<script src="/static/js/jquery.form.min.js"></script>
+		<script src="/static/js/goods_js/add_goods.js"></script>
 	</body>
 </html>

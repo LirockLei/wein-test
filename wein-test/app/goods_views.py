@@ -11,7 +11,7 @@ goods_blue = Blueprint('goods', __name__)
 # 展示商品页面
 @goods_blue.route('/all_goods/', methods=['GET'])
 def all_goods():
-    return render_template('all_goods.html')
+    return render_template('index.html')
 
 
 # 查询所有商品
@@ -32,6 +32,12 @@ def del_goods():
     return jsonify({'code': 200, 'msg': '删除成功'})
 
 
+# 添加商品页面
+@goods_blue.route('/add_goods/', methods=['GET'])
+def a_goods():
+    return render_template('add_goods.html')
+
+
 # 添加商品
 @goods_blue.route('/add_goods/', methods=['POST'])
 def add_goods():
@@ -41,6 +47,10 @@ def add_goods():
     price = request.form.get('price')
     detail = request.form.get('detail')
 
+    if not title:
+        return jsonify({'code': '601', 'msg': '商品名称不能为空！'})
+    if not price:
+        return jsonify({'code': '602', 'msg': '请输入商品价格！'})
     # 保存图片
     if img:
         # 获取项目根路径
@@ -70,6 +80,12 @@ def add_goods():
     return jsonify({'code': 200, 'msg': '添加成功'})
 
 
+# 查询商品页面
+@goods_blue.route('/sel_goods/', methods=['GET'])
+def sel_goods():
+    return render_template('sel_goods.html')
+
+
 # 按价格查询商品
 @goods_blue.route('/select_by_price/', methods=['POST'])
 def sel_goods_by_price():
@@ -87,3 +103,7 @@ def sel_goods_by_title():
     goods_list = Goods.query.filter(Goods.title.contains(title)).all()
     data = [goods.to_dict() for goods in goods_list]
     return jsonify({'code': 200, 'msg': '请求成功', 'data': data})
+
+
+
+
