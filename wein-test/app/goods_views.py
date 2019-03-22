@@ -91,7 +91,7 @@ def sel_goods():
 def sel_goods_by_price():
     max_price = request.form.get('max_price')
     min_price = request.form.get('min_price')
-    goods_list = Goods.query.filter(Goods.price > min_price, Goods.price < max_price).all()
+    goods_list = Goods.query.filter(Goods.price > int(min_price), Goods.price < int(max_price)).all()
     data = [goods.to_dict() for goods in goods_list]
     return jsonify({'code': 200, 'msg': '请求成功', 'data': data})
 
